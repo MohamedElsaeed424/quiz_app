@@ -1,6 +1,6 @@
 # quiz_app
 
-A new Flutter project.
+This is a Flutter-based quiz app designed for Android devices. It is intended to test your knowledge of Flutter
 
 ## Getting Started
 
