@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
-class StartContainer extends StatelessWidget {
-  const StartContainer({super.key});
+class StartScreen extends StatelessWidget {
+  final void Function() startQuiz;
+  const StartScreen(this.startQuiz, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,6 +12,7 @@ class StartContainer extends StatelessWidget {
         Image.asset(
           'assets/images/quiz-logo.png',
           width: 200,
+          color: const Color.fromARGB(97, 17, 16, 16),
         ),
         const SizedBox(
           height: 50,
@@ -22,12 +24,13 @@ class StartContainer extends StatelessWidget {
         const SizedBox(
           height: 50,
         ),
-        FilledButton(
-          onPressed: null,
+        FilledButton.icon(
+          onPressed: startQuiz ,
           style: FilledButton.styleFrom(
-              disabledBackgroundColor: Colors.white,
+              backgroundColor: const Color.fromARGB(97, 17, 16, 16),
               textStyle: const TextStyle(fontSize: 28)),
-          child: const Text(
+          icon: const Icon(Icons.arrow_right_alt),
+          label: const Text(
             'Start quiz',
             style: TextStyle(color: Colors.black),
           ),
